@@ -15,6 +15,8 @@
 		1A60380B26FA35A800F487CF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60380A26FA35A800F487CF /* ComplicationController.swift */; };
 		1A60380D26FA35A900F487CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A60380C26FA35A900F487CF /* Assets.xcassets */; };
 		1A60381026FA35A900F487CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A60380F26FA35A900F487CF /* Preview Assets.xcassets */; };
+		1A60382226FA389700F487CF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382126FA389700F487CF /* Note.swift */; };
+		1A60382526FA398B00F487CF /* NoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382426FA398B00F487CF /* NoteVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		1A60380C26FA35A900F487CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A60380F26FA35A900F487CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A60381126FA35A900F487CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A60382126FA389700F487CF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		1A60382426FA398B00F487CF /* NoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +117,9 @@
 		1A60380526FA35A800F487CF /* NotesWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				1A60380626FA35A800F487CF /* ContentView.swift */,
+				1A60381F26FA384200F487CF /* Views */,
+				1A60382326FA395D00F487CF /* ViewModel */,
+				1A60382026FA386000F487CF /* Model */,
 				1A60380826FA35A800F487CF /* NotesWatchApp.swift */,
 				1A60380A26FA35A800F487CF /* ComplicationController.swift */,
 				1A60380C26FA35A900F487CF /* Assets.xcassets */,
@@ -129,6 +135,30 @@
 				1A60380F26FA35A900F487CF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A60381F26FA384200F487CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A60380626FA35A800F487CF /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A60382026FA386000F487CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A60382126FA389700F487CF /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A60382326FA395D00F487CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A60382426FA398B00F487CF /* NoteVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +290,9 @@
 			files = (
 				1A60380726FA35A800F487CF /* ContentView.swift in Sources */,
 				1A60380926FA35A800F487CF /* NotesWatchApp.swift in Sources */,
+				1A60382526FA398B00F487CF /* NoteVM.swift in Sources */,
 				1A60380B26FA35A800F487CF /* ComplicationController.swift in Sources */,
+				1A60382226FA389700F487CF /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
