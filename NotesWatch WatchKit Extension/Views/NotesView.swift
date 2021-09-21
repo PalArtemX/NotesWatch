@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NotesView: View {
     @StateObject var viewModel = NoteViewModel()
     
     var body: some View {
@@ -17,7 +17,8 @@ struct ContentView: View {
                     TextField("Add Note", text: $viewModel.text)
                     
                     Button {
-                        
+                        viewModel.addNewNore()
+                        viewModel.save()
                     } label: {
                         Image(systemName: "plus.circle")
                     }
@@ -30,8 +31,10 @@ struct ContentView: View {
 
                 }
                 Spacer()
+                Text("\(viewModel.notes.count)")
             }
             .navigationTitle(Text("Notes"))
+            
         } // - NavigationView
         
     }
@@ -49,8 +52,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
-            ContentView()
+            NotesView()
+            NotesView()
                 .previewDevice("Apple Watch Series 3 - 38mm")
                 .preferredColorScheme(.light)
         }

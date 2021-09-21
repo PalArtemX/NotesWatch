@@ -10,7 +10,7 @@
 		1A6037F726FA35A100F487CF /* NotesWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1A6037F626FA35A100F487CF /* NotesWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1A6037FC26FA35A800F487CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A6037FB26FA35A800F487CF /* Assets.xcassets */; };
 		1A60380226FA35A800F487CF /* NotesWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1A60380126FA35A800F487CF /* NotesWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1A60380726FA35A800F487CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60380626FA35A800F487CF /* ContentView.swift */; };
+		1A60380726FA35A800F487CF /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60380626FA35A800F487CF /* NotesView.swift */; };
 		1A60380926FA35A800F487CF /* NotesWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60380826FA35A800F487CF /* NotesWatchApp.swift */; };
 		1A60380B26FA35A800F487CF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60380A26FA35A800F487CF /* ComplicationController.swift */; };
 		1A60380D26FA35A900F487CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A60380C26FA35A900F487CF /* Assets.xcassets */; };
@@ -66,7 +66,7 @@
 		1A6037F626FA35A100F487CF /* NotesWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotesWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6037FB26FA35A800F487CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A60380126FA35A800F487CF /* NotesWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NotesWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A60380626FA35A800F487CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A60380626FA35A800F487CF /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		1A60380826FA35A800F487CF /* NotesWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesWatchApp.swift; sourceTree = "<group>"; };
 		1A60380A26FA35A800F487CF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		1A60380C26FA35A900F487CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		1A60381F26FA384200F487CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A60380626FA35A800F487CF /* ContentView.swift */,
+				1A60380626FA35A800F487CF /* NotesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A60380726FA35A800F487CF /* ContentView.swift in Sources */,
+				1A60380726FA35A800F487CF /* NotesView.swift in Sources */,
 				1A60380926FA35A800F487CF /* NotesWatchApp.swift in Sources */,
 				1A60382526FA398B00F487CF /* NoteVM.swift in Sources */,
 				1A60380B26FA35A800F487CF /* ComplicationController.swift in Sources */,
