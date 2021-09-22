@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 class NoteViewModel: ObservableObject {
@@ -25,6 +26,7 @@ class NoteViewModel: ObservableObject {
         text = ""
     }
     
+    
     func save() {
         do {
             let data = try JSONEncoder().encode(notes)
@@ -35,10 +37,12 @@ class NoteViewModel: ObservableObject {
         }
     }
     
+    
     func getDocDirectory() -> URL {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
     }
+    
     
     func load() {
         DispatchQueue.main.async {
@@ -50,5 +54,14 @@ class NoteViewModel: ObservableObject {
                 
             }
         }
+    }
+    
+    
+    func delete(offsets: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offsets)
+            save()
+        }
+        
     }
 }

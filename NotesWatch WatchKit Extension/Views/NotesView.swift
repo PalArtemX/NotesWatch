@@ -14,24 +14,23 @@ struct NotesView: View {
         NavigationView {
             VStack {
                 HStack {
-                    TextField("Add Note", text: $viewModel.text)
+                    TextField("Add Note...", text: $viewModel.text)
                     
                     Button {
                         viewModel.addNewNore()
                         viewModel.save()
                     } label: {
                         Image(systemName: "plus.circle")
-                    }
-                    .fixedSize()
-                    //.buttonStyle(BorderedButtonStyle(tint: Color.yellow))
-                    .buttonStyle(.plain)
-                    .foregroundColor(.yellow)
-                    .font(.largeTitle)
-                    
+                            .foregroundStyle(.yellow, .white.opacity(0.3))
 
+                    }
+                    //.fixedSize()
+                    .buttonStyle(.plain)
+                    .font(.largeTitle)
                 }
                 Spacer()
-                Text("\(viewModel.notes.count)")
+                RowView(viewModel: viewModel)
+                
             }
             .navigationTitle(Text("Notes"))
             
@@ -55,7 +54,6 @@ struct ContentView_Previews: PreviewProvider {
             NotesView()
             NotesView()
                 .previewDevice("Apple Watch Series 3 - 38mm")
-                .preferredColorScheme(.light)
         }
     }
 }

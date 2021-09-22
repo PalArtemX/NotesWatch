@@ -17,6 +17,8 @@
 		1A60381026FA35A900F487CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A60380F26FA35A900F487CF /* Preview Assets.xcassets */; };
 		1A60382226FA389700F487CF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382126FA389700F487CF /* Note.swift */; };
 		1A60382526FA398B00F487CF /* NoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382426FA398B00F487CF /* NoteVM.swift */; };
+		1A60382726FA6EDC00F487CF /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382626FA6EDC00F487CF /* RowView.swift */; };
+		1A60382926FB2A0700F487CF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382826FB2A0700F487CF /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		1A60381126FA35A900F487CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A60382126FA389700F487CF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		1A60382426FA398B00F487CF /* NoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVM.swift; sourceTree = "<group>"; };
+		1A60382626FA6EDC00F487CF /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		1A60382826FB2A0700F487CF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				1A60380626FA35A800F487CF /* NotesView.swift */,
+				1A60382626FA6EDC00F487CF /* RowView.swift */,
+				1A60382826FB2A0700F487CF /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A60380726FA35A800F487CF /* NotesView.swift in Sources */,
+				1A60382726FA6EDC00F487CF /* RowView.swift in Sources */,
 				1A60380926FA35A800F487CF /* NotesWatchApp.swift in Sources */,
+				1A60382926FB2A0700F487CF /* DetailView.swift in Sources */,
 				1A60382526FA398B00F487CF /* NoteVM.swift in Sources */,
 				1A60380B26FA35A800F487CF /* ComplicationController.swift in Sources */,
 				1A60382226FA389700F487CF /* Note.swift in Sources */,
