@@ -11,21 +11,13 @@ struct DetailView: View {
     
     let text: String
     let count: Int
-    
+    @State private var showInfo = false
     
     var body: some View {
         VStack {
             
             // Header
-            HStack {
-                Capsule()
-                    .frame(height: 1)
-                Image(systemName: "list.bullet.rectangle.portrait")
-                    .foregroundStyle(.yellow.opacity(0.9), .white.opacity(0.6))
-                Capsule()
-                    .frame(height: 1)
-            }
-            .foregroundColor(.accentColor)
+            HeaderView()
             Spacer()
             
             // Text
@@ -39,8 +31,14 @@ struct DetailView: View {
             // footer
             HStack {
                 Image(systemName: "info.circle")
+                    .onTapGesture {
+                        showInfo.toggle()
+                    }
+                    .sheet(isPresented: $showInfo) {
+                        InfoView()
+                    }
                 Spacer()
-                Text("\(count) notes")
+                Text("\(count)")
                     .foregroundColor(.accentColor)
                 Spacer()
                 Image(systemName: "gear")

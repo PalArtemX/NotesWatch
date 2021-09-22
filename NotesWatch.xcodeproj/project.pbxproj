@@ -19,6 +19,8 @@
 		1A60382526FA398B00F487CF /* NoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382426FA398B00F487CF /* NoteVM.swift */; };
 		1A60382726FA6EDC00F487CF /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382626FA6EDC00F487CF /* RowView.swift */; };
 		1A60382926FB2A0700F487CF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382826FB2A0700F487CF /* DetailView.swift */; };
+		1A60382B26FB33A200F487CF /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382A26FB33A200F487CF /* InfoView.swift */; };
+		1A60382E26FB33E500F487CF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60382D26FB33E500F487CF /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		1A60382426FA398B00F487CF /* NoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVM.swift; sourceTree = "<group>"; };
 		1A60382626FA6EDC00F487CF /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		1A60382826FB2A0700F487CF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1A60382A26FB33A200F487CF /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		1A60382D26FB33E500F487CF /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,9 +148,11 @@
 		1A60381F26FA384200F487CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A60382C26FB33C800F487CF /* Component */,
 				1A60380626FA35A800F487CF /* NotesView.swift */,
 				1A60382626FA6EDC00F487CF /* RowView.swift */,
 				1A60382826FB2A0700F487CF /* DetailView.swift */,
+				1A60382A26FB33A200F487CF /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +171,14 @@
 				1A60382426FA398B00F487CF /* NoteVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1A60382C26FB33C800F487CF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				1A60382D26FB33E500F487CF /* HeaderView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A60382B26FB33A200F487CF /* InfoView.swift in Sources */,
+				1A60382E26FB33E500F487CF /* HeaderView.swift in Sources */,
 				1A60380726FA35A800F487CF /* NotesView.swift in Sources */,
 				1A60382726FA6EDC00F487CF /* RowView.swift in Sources */,
 				1A60380926FA35A800F487CF /* NotesWatchApp.swift in Sources */,
