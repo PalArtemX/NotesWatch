@@ -11,9 +11,7 @@ import SwiftUI
 struct NotesWatchApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
                 NotesView()
-            }
         }
     }
 }

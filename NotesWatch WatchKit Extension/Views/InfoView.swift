@@ -10,17 +10,18 @@ import SwiftUI
 struct InfoView: View {
     var body: some View {
         VStack {
+            HeaderView(text: "Info")
+            Spacer()
             Image(systemName: "applelogo")
-                .resizable()
-                .scaledToFit()
-                .foregroundStyle(.white)
-                .padding(50)
-            HeaderView()
+                .font(.largeTitle)
+                .foregroundColor(.white)
+            Spacer()
+            
             Text("Artem Paliutin")
                 .font(.headline)
             Text("Developer")
                 .font(.subheadline)
-                .foregroundColor(.gray)
+                .foregroundColor(.gray.opacity(0.5))
         }
     }
 }

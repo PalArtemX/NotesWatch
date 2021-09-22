@@ -10,6 +10,7 @@ import SwiftUI
 struct RowView: View {
     
     @ObservedObject var viewModel: NoteViewModel
+    @AppStorage("line_count") var lineCount = 1
     
     var body: some View {
         VStack {
@@ -19,10 +20,14 @@ struct RowView: View {
                     NavigationLink {
                         DetailView(text: i.text, count: viewModel.notes.count)
                     } label: {
-                        Text(i.text)
+                        HStack {
+                            Capsule()
+                                .frame(width: 3)
+                                .foregroundColor(.accentColor)
+                            Text(i.text)
+                                .lineLimit(lineCount)
+                        }
                     }
-
-
                 }
                 .onDelete(perform: viewModel.delete)
                 }
@@ -32,8 +37,6 @@ struct RowView: View {
                     .scaledToFit()
                     .foregroundStyle(.yellow.opacity(0.15), .white.opacity(0.05))
                     .padding(25)
-                    
-                
             }
         }
     }

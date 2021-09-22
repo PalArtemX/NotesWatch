@@ -12,15 +12,17 @@ struct DetailView: View {
     let text: String
     let count: Int
     @State private var showInfo = false
+    @State private var showSettings = false
+    
     
     var body: some View {
         VStack {
             
-            // Header
-            HeaderView()
+            // MARK: - Header
+            HeaderView(text: "Details")
             Spacer()
             
-            // Text
+            // MARK: - Text
             ScrollView(.vertical) {
                 Text(text)
                     .font(.title3)
@@ -28,25 +30,46 @@ struct DetailView: View {
             }
             Spacer()
             
-            // footer
+            // MARK: - Footer
             HStack {
+                // Info
                 Image(systemName: "info.circle")
+                    .foregroundStyle(.white, Color.accentColor)
                     .onTapGesture {
                         showInfo.toggle()
                     }
                     .sheet(isPresented: $showInfo) {
                         InfoView()
                     }
+                
                 Spacer()
-                Text("\(count)")
-                    .foregroundColor(.accentColor)
+                
+                // Notes Count
+                HStack {
+                    
+                    Image(systemName: "note.text")
+                        .foregroundStyle(.white, Color.accentColor.opacity(0.5))
+                    Text("\(count)")
+                        .opacity(0.5)
+                }
+                
+                .foregroundColor(.accentColor)
+                
                 Spacer()
+                
+                // Settings
                 Image(systemName: "gear")
+                    .onTapGesture {
+                        showSettings.toggle()
+                    }
+                    .sheet(isPresented: $showSettings) {
+                        SettingsView()
+                    }
+                    
             }
-            
-            
+            //.padding()
+            .foregroundColor(.accentColor)
         }
-        .padding()
     }
 }
 
@@ -61,6 +84,11 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(text: "Hello", count: 4)
+        Group {
+            DetailView(text: "Hello", count: 4)
+            DetailView(text: "Hello", count: 3)
+                .previewDevice("Apple Watch Series 3 - 38mm")
+            
+        }
     }
 }

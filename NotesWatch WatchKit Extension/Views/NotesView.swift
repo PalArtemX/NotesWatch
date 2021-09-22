@@ -14,7 +14,7 @@ struct NotesView: View {
         NavigationView {
             VStack {
                 HStack {
-                    TextField("Add Note...", text: $viewModel.text)
+                    TextField("Note...", text: $viewModel.text)
                     
                     Button {
                         viewModel.addNewNore()
@@ -24,7 +24,6 @@ struct NotesView: View {
                             .foregroundStyle(.yellow, .white.opacity(0.3))
 
                     }
-                    //.fixedSize()
                     .buttonStyle(.plain)
                     .font(.largeTitle)
                 }
@@ -32,10 +31,8 @@ struct NotesView: View {
                 RowView(viewModel: viewModel)
                 
             }
-            .navigationTitle(Text("Notes"))
-            
-        } // - NavigationView
-        
+            .navigationTitle("Notes")
+        } // NavigationView
     }
 }
 
